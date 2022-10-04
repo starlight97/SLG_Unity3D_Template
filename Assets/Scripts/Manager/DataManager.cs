@@ -39,6 +39,11 @@ public class DataManager
     {
         App.instance.StartCoroutine(LoadAllDataRoutine());
     }
+    // App이 없을 경우에 호출
+    public void LoadAllData(MonoBehaviour mono)
+    {
+        mono.StartCoroutine(LoadAllDataRoutine());
+    }
     private IEnumerator LoadAllDataRoutine()
     {
         int idx = 0;
